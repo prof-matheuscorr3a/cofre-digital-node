@@ -30,7 +30,8 @@ jobs:
           ENVIRONMENT: ${{ secrets.ENVIRONMENT }}
         
         run: |
-          timeout 10s npm start
+          npm start &
+          sleep 10
 
       - name: Exibir secrets mascarados
         run: | 
